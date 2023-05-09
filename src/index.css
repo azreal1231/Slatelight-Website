@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+body
+{
+    background-color: #1C2331;
+    color: #f8f8ff;
+
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: blue orange;   /* scroll thumb and track */ 
+}
+h2/*all the h2 tags "the headings"*/
+{
+	font-family: 'Playfair Display',serif;
+	font-size: 200%;
+	font-weight: 700;
+	color: #2c2c2c;
+	text-align: center;
+	text-decoration: underline;
+}
+.navbar-brand
+{
+    font-size: 40px;
+    /* text-decoration: underline; */
+}
+.form-nav-links
+{
+    padding-right: 4em;
+}
+.nav-links
+{
+    font-weight: 100;
+    font-size: 20px;
+    padding-right: 30px;
+    cursor: pointer;
+    color: azure;
+}
+.nav-links:hover
+{
+    text-shadow: 4px 4px 15px rgb(147, 245, 252);
+    color: azure;
+}
+.jumbotron
+{
+    padding-top: 15%;
+    background: transparent;
+}
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: rgba(26, 39, 65, 0.493)!important;
+    }
+}
+.view,body,html
+{
+    height:100%
+}
+.navbar
+{
+    background-color:rgba(0,0,0,.2)
+}
+.page-footer,.top-nav-collapse
+{
+    background-color:#1C2331
+}
+@media only screen and (max-width:768px)
+{   .navbar
+    {
+        background: rgba(4, 15, 37, 0.616)!important;
+    }
+    .jumbotron
+    {
+        padding-top: 40%;
+        background: transparent;
+    }
+}
+.Contact p
+{
+	text-align: center;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+.Contact a
+{
+	color: #000;
+	text-decoration: none;
+}
+.Contact a:hover
+{
+    text-shadow: 8px 8px 25px rgb(120, 246, 255);
+    color: azure;
+}
+.About p
+{
+	text-align: center;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.footer
+{
+    background: #2c2c2c;
+    /* position: fixed; */
+    text-align: center;
+}
+
+.parallax/*this is that background img that will move in the background*/
+{
+	background: url(/imgs/parallax.png) repeat center fixed;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+.parallax-inner
+{
+	padding-top: 30%;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+  .jumbotron
+  {
+      display: none;
+  }
+  img
+  {
+      width: auto;
+  }
+}
+
+
+.container2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
