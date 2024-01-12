@@ -122,7 +122,7 @@ return <>
         <div className="col-sm-6" style={{ height: '300px' }}>
           <div className="retainer-card">
             <h3>Sprint Tier</h3>
-            <h5>20-Hour Retainer</h5>
+            <h5>20-Hour Retainer | <span>R7,600</span></h5>
             <p>
               Ideal for clients needing occasional support or small projects, 
               the Sprint Tier offers 20 hours of dedicated development time at a slightly reduced rate. 
@@ -134,7 +134,7 @@ return <>
         <div className="col-sm-6" style={{'height': '300px'}}>
           <div className="retainer-card">
             <h3>Standard Tier</h3>
-            <h5>40-Hour Retainer</h5>
+            <h5>40-Hour Retainer | <span>R14,400</span></h5>
             <p>
               Designed for clients with regular development needs, 
               the Standard Tier provides 40 hours of development time per month. 
@@ -148,7 +148,7 @@ return <>
         <div className="col-sm-6" style={{'height': '300px'}}>
           <div className="retainer-card">
             <h3>Marathon Tier</h3>
-            <h5>100-Hour Retainer </h5>
+            <h5>100-Hour Retainer | <span></span> </h5>
             <p>
               The Marathon Tier is ideal for clients requiring extensive development work or full-scale projects. 
               Offering 100 hours of development time per month, 
@@ -161,7 +161,7 @@ return <>
         <div className="col-sm-6" style={{'height': '300px'}}>
           <div className="retainer-card">
             <h3>Premier Tier</h3>
-            <h5>100-Hour Retainer + 20 Free Hours & Quick Support </h5>
+            <h5>100-Hour Retainer + 20 Free Hours & Quick Support | <span>R38,400</span></h5>
             <p>
               The Premier Tier is the ultimate package, 
               offering 120 hours of development time (100 hours + 20 bonus hours) with the commitment to a 2-hour response time. 
@@ -176,57 +176,41 @@ return <>
         <div className="col-sm-3" style={{ height: '200px' }}>
           <div className="addons-card">
             <h3>Boost Tier</h3>
-            <h5>5-Hour Add-On</h5>
+            <h5>5-Hour Add-On | <span>R1,750</span></h5>
             <p> Quick 5-hour boost for small tasks or final touches.</p>
           </div>
         </div>
         <div className="col-sm-3" style={{'height': '200px'}}>
           <div className="addons-card">
             <h3>Surge Tier</h3>
-            <h5>10-Hour Add-On</h5>
+            <h5>10-Hour Add-On | <span>R3,675</span></h5>
             <p>10 extra hours for intermediate project extensions.</p>
           </div>
         </div>
         <div className="col-sm-3" style={{'height': '200px'}}>
           <div className="addons-card">
             <h3>Momentum Tier</h3>
-            <h5>15-Hour Add-On </h5>
+            <h5>15-Hour Add-On | <span>R5,775</span></h5>
             <p>15-hour top-up for significant project expansions.</p>
           </div>
         </div>
       </div>
     </div>
     <div className="container">
-    <section>
-      <div className="row d-flex justify-content-center mt-4">
-        <div className="col-lg-8">
-          <p className='text-white'>
-            Please note that all retainer and add-on hour tiers cover a range of services including development work, support, and meetings. 
-            The hours purchased within any tier are cumulative and account for the total time spent on all project-related activities, 
-            encompassing coding, troubleshooting, as well as consultation and strategy meetings. 
-            We strive to use this time efficiently to maximize the value and progress of your project. 
-            It is our policy to maintain transparency and open communication about the allocation of hours to ensure mutual understanding and satisfaction. 
-            For any specific questions or concerns about how hours are allocated, please feel free to contact us directly.
-          </p>
+      <section>
+        <div className="row d-flex justify-content-center mt-4">
+          <div className="col-lg-8">
+            <p className='text-white'>
+              Please note that all retainer and add-on hour tiers cover a range of services including development work, support, and meetings. 
+              The hours purchased within any tier are cumulative and account for the total time spent on all project-related activities, 
+              encompassing coding, troubleshooting, as well as consultation and strategy meetings. 
+              We strive to use this time efficiently to maximize the value and progress of your project. 
+              It is our policy to maintain transparency and open communication about the allocation of hours to ensure mutual understanding and satisfaction. 
+              For any specific questions or concerns about how hours are allocated, please feel free to contact us directly.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    </div>
-    <div className="container test-white">
-    <section>
-      <div className="row d-flex justify-content-center mt-4">
-        <div className="col-lg-8">
-          <p className='text-white'>
-            Please note that all retainer and add-on hour tiers cover a range of services including development work, support, and meetings. 
-            The hours purchased within any tier are cumulative and account for the total time spent on all project-related activities, 
-            encompassing coding, troubleshooting, as well as consultation and strategy meetings. 
-            We strive to use this time efficiently to maximize the value and progress of your project. 
-            It is our policy to maintain transparency and open communication about the allocation of hours to ensure mutual understanding and satisfaction. 
-            For any specific questions or concerns about how hours are allocated, please feel free to contact us directly.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
     </div>
   </div>
 </>
