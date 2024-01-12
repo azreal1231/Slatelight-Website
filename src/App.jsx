@@ -148,7 +148,7 @@ return <>
         <div className="col-sm-6" style={{'height': '300px'}}>
           <div className="retainer-card">
             <h3>Marathon Tier</h3>
-            <h5>100-Hour Retainer | <span></span> </h5>
+            <h5>100-Hour Retainer | <span>R34,000</span> </h5>
             <p>
               The Marathon Tier is ideal for clients requiring extensive development work or full-scale projects. 
               Offering 100 hours of development time per month, 
