@@ -74,17 +74,12 @@ function doAddonThing(){
 }
 
 return <>
-<nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+  <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     {/* <a className="navbar-brand" href="#">Slatelight</a> */}
     <img style={{ width: 200 }} src="/imgs/Logo.png" alt="" />
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+    <button className="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+      aria-expanded="false" aria-label="Toggle navigation"
     >
       <span className="navbar-toggler-icon" />
     </button>
@@ -196,7 +191,7 @@ return <>
         </div>
       </div>
     </div>
-    <div className="container">
+    <div className="container" style={{marginTop: '100px'}}>
       <section>
         <div className="row d-flex justify-content-center mt-4">
           <div className="col-lg-8">

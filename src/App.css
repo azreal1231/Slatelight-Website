@@ -30,6 +30,7 @@ body {
     justify-content: space-between;
     color: white;
     transition: opacity 0.3s ease, background-image 0.3s ease;
+    cursor: default;
 }
 
 .retainer-card h3 {
@@ -67,6 +68,7 @@ body {
     justify-content: space-between;
     color: white;
     transition: opacity 0.3s ease, background-image 0.3s ease;
+    cursor: default;
 }
 
 .addons-card h3 {

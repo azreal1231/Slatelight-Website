@@ -1,7 +1,7 @@
 html {
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #4A919E 0%,#1C2331 100%);
+    background: radial-gradient(ellipse at bottom, #32636b 0%,#1C2331 100%);
 }
 
 .floating-content {
