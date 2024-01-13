@@ -1,7 +1,15 @@
+import { useState, useEffect } from "react";
 import { addons } from "../utils/constants"
 
 const AddonsComp = () => {
+const [compMounted, setCompMounted] = useState(false)
 
+useEffect(() => {
+    if(!compMounted){
+        setCompMounted(true)
+        doAddonThing()
+    }
+})
 
 function doAddonThing(){
     const cards = document.querySelectorAll('.addons-card');
