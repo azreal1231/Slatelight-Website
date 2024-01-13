@@ -8,10 +8,23 @@ const [pageMounted, setPageMounted] = useState(false)
 useEffect(() => {
   if(!pageMounted){
     setPageMounted(true)
-    doRetainerThing()
-    doAddonThing()
+    document.getElementById('stars').style.boxShadow = generateStars();
+    // doRetainerThing()
+    // doAddonThing()
   }
 }, [pageMounted])
+
+function generateStars() {
+  let stars = '';
+  for (let i = 0; i < 100; i++) {  
+      const x = Math.floor(Math.random() * window.innerWidth);
+      const y = Math.floor(Math.random() * window.innerHeight);
+      const size = Math.random() * 2;
+      stars += `${x}px ${y}px ${size}px #FFF, `;
+  }
+  return stars.slice(0, -2);
+}
+
 
 function doRetainerThing(){
     const cards = document.querySelectorAll('.retainer-card');
@@ -73,8 +86,6 @@ function doAddonThing(){
 
 return <>
   <div id="stars"></div>
-  {/* <div id="stars2"></div>
-  <div id="stars3"></div> */}
 </>
 
 }
