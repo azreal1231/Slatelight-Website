@@ -16,6 +16,12 @@ return <>
                 <li className="nav-item">
                     <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#packages">Packages</a>
                 </li>
+                <li className="nav-item">
+                    <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#about">References</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#packages">Partners</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -71,9 +71,13 @@ return <>
   : null}
   <div className="container">
     <RetainersComp/>
+    <AddonsComp/>
   </div>
   <div className="container">
-    <AddonsComp/>
+    <ReferencesComp/>
+  </div>
+  <div className="container">
+    <PartnersComp/>
   </div>
   <div className="container">
     <DisclaimerComp/>

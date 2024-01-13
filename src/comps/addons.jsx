@@ -42,13 +42,13 @@ function doAddonThing(){
 
 return <>
 <div className="row d-flex justify-content-center">
-    <h3 className="text-white text-center" id="addons">Addons</h3>
+    <h4 className="text-white text-center" id="addons">Addons</h4>
     {addons.map((_x, _index) => 
         <div className="col-lg-3 col-md-6 col-sm-12 p-2" key={_index}>
             <div className="addons-card">
                 <h4>{_x['title']}</h4>
-                <h6>{_x['sub_title']} | <span>{_x['amount']}</span></h6>
-                <small>{_x['description']}</small>
+                <h6><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h6>
+                <small className="opacity-50">{_x['description']}</small>
             </div>
         </div>
     )}
