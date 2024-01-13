@@ -10,7 +10,9 @@ useEffect(() => {
 }, [compMounted])
 
 return <>
-
+    <div className="container" id="about">
+        
+    </div>
 </>
 }
 

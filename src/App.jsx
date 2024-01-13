@@ -3,6 +3,8 @@ import NavBar from './comps/navbar'
 import RetainersComp from './comps/retainers'
 import AddonsComp from './comps/addons'
 import DisclaimerComp from './comps/disclaimer'
+import ReferencesComp from './comps/references'
+import PartnersComp from './comps/partners'
 import './App.css'
 import './kak.css'
 

@@ -42,7 +42,7 @@ function doRetainerThing(){
 
 return <>
 <div className="row mb-4">
-<h2 className="text-white text-center">Packages</h2>
+    <h2 className="text-white text-center" id="packages">Packages</h2>
     {retainers.map((_x, _index) => 
         <div className="col-12 col-md-6 col-lg-6 p-4" key={_index}>
             <div className="retainer-card">

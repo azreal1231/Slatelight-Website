@@ -41,10 +41,10 @@ function doAddonThing(){
 }
 
 return <>
-<div className="row d-flex justify-content-center" style={{marginTop: '100px'}}>
-    <h2 className="text-white text-center">Addons</h2>
+<div className="row d-flex justify-content-center">
+    <h3 className="text-white text-center" id="addons">Addons</h3>
     {addons.map((_x, _index) => 
-        <div className="col-lg-3 col-md-6 col-sm-12 p-4" key={_index}>
+        <div className="col-lg-3 col-md-6 col-sm-12 p-2" key={_index}>
             <div className="addons-card">
                 <h4>{_x['title']}</h4>
                 <h6>{_x['sub_title']} | <span>{_x['amount']}</span></h6>
