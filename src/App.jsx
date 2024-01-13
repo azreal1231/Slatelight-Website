@@ -85,6 +85,13 @@ function doAddonThing(){
 }
 
 return <>
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="/">
+        <img style={{ width: 200 }} src="/imgs/Logo.png" alt="logo" height="70" className="d-inline-block align-text-top" />
+      </a>
+    </div>
+  </nav>
   <div id="stars"></div>
 </>
 
