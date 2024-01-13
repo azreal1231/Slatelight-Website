@@ -1,8 +1,9 @@
 const DisclaimerComp = () => {
 return <>
 <div className="row d-flex justify-content-center mt-4">
+    <small className="text-center text-white pb-0 pt-0">Disclaimer</small>
     <div className="col-12 col-lg-8">
-        <p className='text-white text-center'>
+        <p className='text-white text-center p-4 pt-0 opacity-75'>
             Please note that all retainer and add-on hour tiers cover a range of services including development work, support, and meetings. 
             The hours purchased within any tier are cumulative and account for the total time spent on all project-related activities, 
             encompassing coding, troubleshooting, as well as consultation and strategy meetings. 

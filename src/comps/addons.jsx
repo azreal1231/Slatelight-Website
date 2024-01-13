@@ -42,12 +42,13 @@ function doAddonThing(){
 
 return <>
 <div className="row d-flex justify-content-center" style={{marginTop: '100px'}}>
+    <h2 className="text-white text-center">Addons</h2>
     {addons.map((_x, _index) => 
-        <div className="col-6 col-md-4 col-lg-3" key={_index} style={{ height: '200px' }}>
+        <div className="col-lg-3 col-md-4 col-sm-12 p-4" key={_index}>
             <div className="addons-card">
-                <h3>{_x['title']}</h3>
-                <h5>{_x['sub_title']} | <span>{_x['amount']}</span></h5>
-                <p>{_x['description']}</p>
+                <h4>{_x['title']}</h4>
+                <h6>{_x['sub_title']} | <span>{_x['amount']}</span></h6>
+                <small>{_x['description']}</small>
             </div>
         </div>
     )}

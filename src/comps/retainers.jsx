@@ -42,8 +42,9 @@ function doRetainerThing(){
 
 return <>
 <div className="row mb-4">
+<h2 className="text-white text-center">Packages</h2>
     {retainers.map((_x, _index) => 
-        <div className="col-12 col-md-6 col-lg-6 p-4" key={_index} style={{'height': '300px'}}>
+        <div className="col-12 col-md-6 col-lg-6 p-4" key={_index}>
             <div className="retainer-card">
                 <h3>{_x['title']}</h3>
                 <h5>{_x['sub_title']} | <span>{_x['amount']}</span></h5>
