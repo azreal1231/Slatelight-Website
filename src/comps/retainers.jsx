@@ -9,7 +9,7 @@ useEffect(() => {
         setCompMounted(true)
         doRetainerThing()
     }
-})
+}, [compMounted])
 
 function doRetainerThing(){
     const cards = document.querySelectorAll('.retainer-card');

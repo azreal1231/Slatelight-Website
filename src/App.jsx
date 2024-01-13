@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import NavBar from './comps/navbar'
 import RetainersComp from './comps/retainers'
 import AddonsComp from './comps/addons'
 import DisclaimerComp from './comps/disclaimer'
@@ -7,14 +8,30 @@ import './kak.css'
 
 function App() {
 const [pageMounted, setPageMounted] = useState(false)
+const [isMobile, setIsMobile] = useState(false);
 
 useEffect(() => {
   if(!pageMounted){
     setPageMounted(true)
-    document.getElementById('stars').style.boxShadow = generateStars();
-    document.getElementById('starsBig').style.boxShadow = generateStarsBig();
   }
 }, [pageMounted])
+
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth <= 768) { // You can adjust this breakpoint as needed
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+      document.getElementById('stars').style.boxShadow = generateStars();
+      document.getElementById('starsBig').style.boxShadow = generateStarsBig();
+    }
+  };
+  handleResize();
+  window.addEventListener('resize', handleResize);
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+}, []);
 
 function generateStars() {
   let stars = '';
@@ -42,17 +59,14 @@ function generateStarsBig() {
   return stars.slice(0, -2);
 }
 
-
 return <>
-<nav className="navbar navbar-expand-lg my-navbar">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="/">
-      <img style={{ maxHeight: '70px', maxWidth: '100%', height: 'auto' }} src="/imgs/Logo.png" alt="logo" className="d-inline-block align-text-top" />
-    </a>
-  </div>
-</nav>
-  <div id="stars"></div>
-  <div id="starsBig"></div>
+  <NavBar/>
+  {!isMobile?
+    <>
+      <div id="stars"></div>
+      <div id="starsBig"></div>
+    </>
+  : null}
   <div className="container">
     <RetainersComp/>
   </div>
