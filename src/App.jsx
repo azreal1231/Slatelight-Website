@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import NavBar from './comps/navbar'
+import AboutComp from './comps/about'
 import RetainersComp from './comps/retainers'
 import AddonsComp from './comps/addons'
 import DisclaimerComp from './comps/disclaimer'
@@ -69,6 +70,9 @@ return <>
       <div id="starsBig"></div>
     </>
   : null}
+  <div className="container">
+    <AboutComp/>
+  </div>
   <div className="container">
     <RetainersComp/>
     <AddonsComp/>
