@@ -78,3 +78,26 @@ html {
     position: absolute;
     top: 100vh; /* Adjust based on your requirement */
 }
+
+.app-container {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    overflow: hidden; /* Optional: In case contents exceed viewport height */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensures it's behind content but not behind the body */
+  }
+
+  .container {
+    position: relative;
+    z-index: 1; /* Ensures the content is above the canvas */
+    /* Ensure the background is at least partially transparent */
+    background-color: rgba(255, 255, 255, 0.0); /* Example: semi-transparent white */
+  }

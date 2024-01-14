@@ -113,28 +113,19 @@ function App() {
     });
   }
   
-  
-  
-
   return (
     <>
       <NavBar />
-      <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
-      <div className="container">
-        <AboutComp />
-      </div>
-      <div className="container">
-        <RetainersComp />
-        <AddonsComp />
-      </div>
-      <div className="container">
-        <ReferencesComp />
-      </div>
-      <div className="container">
-        <PartnersComp />
-      </div>
-      <div className="container">
-        <DisclaimerComp />
+      <div className="app-container">
+        <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
+        <div className="container">
+          <AboutComp />
+          <RetainersComp />
+          <AddonsComp />
+          <ReferencesComp />
+          <PartnersComp />
+          <DisclaimerComp />
+        </div>
       </div>
     </>
   );
