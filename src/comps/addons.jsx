@@ -17,7 +17,6 @@ useEffect(() => {
     }
     window.addEventListener('resize', handleResize);
 
-    // Cleanup function
     return () => {
         window.removeEventListener('resize', handleResize);
     };
@@ -62,31 +61,6 @@ useEffect(() => {
         });
     };
 }, []);
-
-
-function doAddonThing(){
-    const cards = document.querySelectorAll('.addons-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.backdropFilter = 'blur(10px)';
-            this.style.backgroundImage = 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.0) 50%)';
-        
-            cards.forEach(otherCard => {
-                if (otherCard !== this) {
-                    otherCard.style.backdropFilter = 'blur(10px)';
-                    otherCard.style.opacity = '0.3';
-                }
-            });
-        });
-    
-        card.addEventListener('mouseleave', function() {
-            this.style.backgroundImage = 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.0) 50%)';
-            cards.forEach(otherCard => {
-                otherCard.style.opacity = '1';
-            });
-        });
-    });
-}
 
 const MobileComp = () => {
     return <div className="row d-flex justify-content-center">
