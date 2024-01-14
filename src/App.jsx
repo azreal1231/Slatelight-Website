@@ -26,7 +26,6 @@ function App() {
     // Update and draw stars
     const render = () => {
       drawStars(ctx, starsRef.current);
-      updateStarPositions(starsRef.current);
       animationFrameId = requestAnimationFrame(render);
     };
 
@@ -34,8 +33,11 @@ function App() {
 
     function handleMouseMove(e) {
       // Adjust star direction based on mouse position
-      adjustStarDirection(starsRef.current, e.clientX, e.clientY);
+      adjustStarDirection(starsRef.current, e.clientX);
+      drawStars(ctx, starsRef.current); // Redraw stars with new positions
     }
+    
+    
 
     window.addEventListener('mousemove', handleMouseMove);
 
@@ -45,7 +47,6 @@ function App() {
     };
   }, []); // The empty dependency array ensures this runs once after initial render
 
-
   // Function to create an array of stars
   function createStars(count) {
     const stars = [];
@@ -53,11 +54,15 @@ function App() {
       stars.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-        size: Math.random() * 2
+        size: Math.random() * 2,
+        speed: Math.random() * 0.5 + 0.5, // Speed of falling
+        velocityX: 0, // Horizontal velocity
+        velocityY: 0 // Vertical velocity
       });
     }
     return stars;
   }
+  
 
   // Function to draw stars on the canvas
   function drawStars(ctx, stars) {
@@ -67,24 +72,49 @@ function App() {
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
       ctx.fill();
-
-      // Update star's y position to create falling effect
-      star.y += star.size * 0.5; // Speed depends on size
-
+  
+      // Update star's position
+      star.x += star.velocityX;
+      star.y += star.velocityY;
+  
       // Reset star position when it goes off screen
       if (star.y > window.innerHeight) {
         star.y = 0;
         star.x = Math.random() * window.innerWidth;
+      } else if (star.x < 0 || star.x > window.innerWidth) {
+        star.x = Math.random() * window.innerWidth;
+        star.y = 0;
       }
     });
   }
+  
 
-  // Function to update star positions based on mouse position
-  function updateStarPositions(stars, mouseX, mouseY) {
-    // Update each star's position based on the mouse coordinates
-    // This is where you would implement the logic to move stars based on mouse position
-    // For example, you could adjust the x and y coordinates of each star here
+  // Function to adjust star direction based on mouse position
+  function adjustStarDirection(stars, mouseX) {
+    const windowWidth = window.innerWidth;
+    // Interpolate the angle between 240 and 310 degrees based on mouse position
+    const angleLeft = 240; // Angle when mouse is on the left
+    const angleRight = 310; // Angle when mouse is on the right
+    const angleRange = angleRight - angleLeft;
+  
+    // Calculate the normalized mouse position (0.0 - 1.0)
+    const normalizedMouseX = mouseX / windowWidth;
+  
+    // Interpolate the angle based on the mouse position
+    const angle = angleLeft + angleRange * normalizedMouseX;
+  
+    // Convert angle to radians for calculation
+    const angleRadians = angle * (Math.PI / 180);
+  
+    stars.forEach(star => {
+      // Update the velocity based on the angle
+      star.velocityX = Math.cos(angleRadians) * star.speed;
+      star.velocityY = Math.abs(Math.sin(angleRadians)) * star.speed;
+    });
   }
+  
+  
+  
 
   return (
     <>
