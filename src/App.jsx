@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import NavBar from './comps/navbar';
 import AboutComp from './comps/about';
 import RetainersComp from './comps/retainers';
@@ -10,88 +10,86 @@ import './App.css';
 import './kak.css';
 
 function App() {
-  const [pageMounted, setPageMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const canvasRef = useRef(null);
+  const starsRef = useRef([]);
 
   useEffect(() => {
-    if (!pageMounted) {
-      setPageMounted(true);
-    }
-  }, [pageMounted]);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-        document.getElementById('stars').style.boxShadow = generateStars();
-        document.getElementById('starsBig').style.boxShadow = generateStarsBig();
-      }
+    const ctx = canvas.getContext('2d');
+    starsRef.current = createStars(200); // Create an array of stars
+
+    let animationFrameId;
+
+    // Update and draw stars
+    const render = () => {
+      drawStars(ctx, starsRef.current);
+      updateStarPositions(starsRef.current);
+      animationFrameId = requestAnimationFrame(render);
     };
 
-    const handleMouseMove = (e) => {
-      const { innerWidth, innerHeight } = window;
-      const mouseX = e.clientX - innerWidth / 2;
-      const mouseY = e.clientY - innerHeight / 2;
+    render();
 
-      // Invert the direction of rotation. Change '-' to '+' and vice versa.
-      const rotateDegX = -mouseY / innerHeight * 30; // Max 15 degrees rotation
-      const rotateDegY = mouseX / innerWidth * 30; // Max 15 degrees rotation
-
-      const stars = document.getElementById('stars');
-      const starsBig = document.getElementById('starsBig');
-
-      if (stars && starsBig) {
-          stars.style.transform = `rotateX(${rotateDegX}deg) rotateY(${rotateDegY}deg)`;
-          starsBig.style.transform = `rotateX(${rotateDegX}deg) rotateY(${rotateDegY}deg)`;
-      }
-  };
-  handleResize();
-  window.addEventListener('resize', handleResize);
-  window.addEventListener('mousemove', handleMouseMove);
-
-  return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
-  };
-}, []);
-
-  function generateStars() {
-    let stars = '';
-    for (let i = 0; i < 200; i++) {
-      const x = Math.floor(Math.random() * window.innerWidth);
-      const y1 = Math.floor(Math.random() * window.innerHeight);
-      const y2 = y1 + window.innerHeight;
-      const size = Math.random() * 2;
-      stars += `${x}px ${y1}px ${size}px #FFF, `;
-      stars += `${x}px ${y2}px ${size}px #FFF, `;
+    function handleMouseMove(e) {
+      // Adjust star direction based on mouse position
+      adjustStarDirection(starsRef.current, e.clientX, e.clientY);
     }
-    return stars.slice(0, -2);
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []); // The empty dependency array ensures this runs once after initial render
+
+
+  // Function to create an array of stars
+  function createStars(count) {
+    const stars = [];
+    for (let i = 0; i < count; i++) {
+      stars.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 2
+      });
+    }
+    return stars;
   }
 
-  function generateStarsBig() {
-    let stars = '';
-    for (let i = 0; i < 20; i++) {
-      const x = Math.floor(Math.random() * window.innerWidth);
-      const y1 = Math.floor(Math.random() * window.innerHeight);
-      const y2 = y1 + window.innerHeight;
-      const size = Math.random() * 5;
-      stars += `${x}px ${y1}px ${size}px #FFF, `;
-      stars += `${x}px ${y2}px ${size}px #FFF, `;
-    }
-    return stars.slice(0, -2);
+  // Function to draw stars on the canvas
+  function drawStars(ctx, stars) {
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    stars.forEach(star => {
+      ctx.fillStyle = '#FFF';
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
+      ctx.fill();
+
+      // Update star's y position to create falling effect
+      star.y += star.size * 0.5; // Speed depends on size
+
+      // Reset star position when it goes off screen
+      if (star.y > window.innerHeight) {
+        star.y = 0;
+        star.x = Math.random() * window.innerWidth;
+      }
+    });
+  }
+
+  // Function to update star positions based on mouse position
+  function updateStarPositions(stars, mouseX, mouseY) {
+    // Update each star's position based on the mouse coordinates
+    // This is where you would implement the logic to move stars based on mouse position
+    // For example, you could adjust the x and y coordinates of each star here
   }
 
   return (
     <>
       <NavBar />
-      {!isMobile && (
-        <>
-          <div id="stars"></div>
-          <div id="starsBig"></div>
-        </>
-      )}
+      <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
       <div className="container">
         <AboutComp />
       </div>
