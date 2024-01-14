@@ -17,10 +17,10 @@ return <>
                     <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#packages">Packages</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#about">References</a>
+                    <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#references">References</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#packages">Partners</a>
+                    <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#partners">Partners</a>
                 </li>
             </ul>
         </div>

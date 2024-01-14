@@ -24,7 +24,7 @@ function doAddonThing(){
         // Reset the blur of all other cards
         cards.forEach(otherCard => {
             if (otherCard !== this) {
-            otherCard.style.backdropFilter = 'blur(0px)';
+            otherCard.style.backdropFilter = 'blur(10px)';
             otherCard.style.opacity = '0.3';
             }
         });
