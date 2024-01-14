@@ -13,6 +13,23 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+@media (max-width: 768px) { /* Adjusts for mobile devices */
+    .my-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* High z-index to keep it on top */
+        backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+    }
+
+    .main-content {
+        padding-top: 70px; /* Adjust this value based on the height of your navbar */
+    }
+}
+
+
 .retainer-card {
     background-color: rgba(0, 0, 0, 0.0);
     background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.0) 50%);

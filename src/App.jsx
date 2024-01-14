@@ -106,7 +106,7 @@ function App() {
   }
   
   return (
-    <>
+    <div className="main-content">
       <NavBar />
       <div className="app-container">
         <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
@@ -119,7 +119,7 @@ function App() {
           <DisclaimerComp />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
