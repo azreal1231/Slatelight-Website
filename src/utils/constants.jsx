@@ -43,3 +43,12 @@ export const addons = [
         'description': '15-hour top-up for significant project expansions.'
     },
 ]
+
+export const partners = [
+    {
+        'logo_url': 'https://trinityweb.online/wp-content/uploads/2022/09/trinity_white.png.webp',
+        'website_url': 'https://trinityweb.online/web-development-services/',
+        'name': '',
+        'description': `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis obcaecati aliquam magni distinctio consequuntur iusto totam, animi quas laudantium earum recusandae aspernatur error vero, aliquid labore accusantium commodi cum eveniet?`
+    }
+]

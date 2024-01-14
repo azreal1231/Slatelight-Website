@@ -29,7 +29,6 @@ body {
     }
 }
 
-
 .retainer-card {
     background-color: rgba(0, 0, 0, 0.0);
     background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.0) 50%);
@@ -103,3 +102,37 @@ body {
 .addons-card p {
 
 }
+
+.normal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    transition: opacity 0.3s ease, background-image 0.3s ease;
+    cursor: default;
+}
+
+.size-50 {
+    transform: scale(0.5);
+    transform-origin: center center; /* Adjust as needed */
+}
+
+.size-70 {
+    transform: scale(0.7);
+    transform-origin: center center; /* Adjust as needed */
+}
+
+/* .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+} */
