@@ -112,9 +112,9 @@ function App() {
         <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
         <div className="container">
           <AboutComp />
+          <ReferencesComp />
           <RetainersComp />
           <AddonsComp />
-          <ReferencesComp />
           <PartnersComp />
           <DisclaimerComp />
         </div>
