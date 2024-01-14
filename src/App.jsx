@@ -89,8 +89,8 @@ function App() {
   
   function adjustStarDirection(stars, mouseX) {
     const windowWidth = window.innerWidth;
-    const angleLeft = 240;
-    const angleRight = 310;
+    const angleLeft = 250;
+    const angleRight = 290;
     const angleRange = angleRight - angleLeft;
   
     const normalizedMouseX = mouseX / windowWidth;
