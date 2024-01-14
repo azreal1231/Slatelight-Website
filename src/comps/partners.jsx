@@ -1,6 +1,6 @@
 const PartnersComp = () => {
 return <div id="partners">
-    <h3 className="text-center text-white">partners</h3>
+    <h2 className="text-center text-white">partners</h2>
 </div>
 }
 
