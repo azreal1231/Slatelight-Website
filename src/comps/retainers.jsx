@@ -104,7 +104,6 @@ return <>
     :
         <NonMobileComp/>
     }
-    
 </div>
 </>
 }
