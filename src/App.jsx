@@ -10,11 +10,18 @@ import './App.css';
 import './kak.css';
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const canvasRef = useRef(null);
   const starsRef = useRef([]);
 
   useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    if (isMobile) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -38,10 +45,11 @@ function App() {
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isMobile]);
 
   function createStars(count) {
     const stars = [];
