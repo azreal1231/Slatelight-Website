@@ -60,7 +60,7 @@ html {
 }
 
 #stars {
-    animation: animStar 50s linear infinite;
+    animation: animStar 40s linear infinite;
 }
 
 #starsBig {
