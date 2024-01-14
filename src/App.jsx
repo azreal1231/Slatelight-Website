@@ -8,6 +8,7 @@ import ReferencesComp from './comps/references';
 import PartnersComp from './comps/partners';
 import './App.css';
 import './kak.css';
+import './my-swiper.css';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

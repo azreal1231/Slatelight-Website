@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { Pagination } from 'swiper/modules';
+
 import { retainers } from "../utils/constants"
 
 const RetainersComp = () => {
 const [compMounted, setCompMounted] = useState(false)
+const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
 useEffect(() => {
     if(!compMounted){
@@ -10,6 +18,19 @@ useEffect(() => {
         doRetainerThing()
     }
 }, [compMounted])
+
+useEffect(() => {
+    function handleResize() {
+        setIsMobile(window.innerWidth < 768);
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    if (isMobile) return;
+
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, [isMobile])
 
 function doRetainerThing(){
     const cards = document.querySelectorAll('.retainer-card');
@@ -40,18 +61,50 @@ function doRetainerThing(){
     });
 }
 
+const MobileComp = () => {
+    return <div className="row d-flex justify-content-center">
+        <div className="col-11">
+        <Swiper slidesPerView={'1'} pagination={{clickable: true,}}
+            modules={[Pagination]}className="mySwiper">
+            {retainers.map((_x, _index) => 
+                <SwiperSlide key={_index}>
+                    <div className="retainer-card">
+                        <h3>{_x['title']}</h3>
+                        <h5><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h5>
+                        <p className="opacity-50">{_x['description']}</p>
+                    </div>
+                </SwiperSlide>
+            )}
+        </Swiper>
+        </div>
+    </div>
+}
+
+const NonMobileComp = () => {
+    return (
+        <>
+        {retainers.map((_x, _index) => 
+            <div className="col-12 col-md-6 col-lg-6 p-4" key={_index}>
+                <div className="retainer-card">
+                    <h3>{_x['title']}</h3>
+                    <h5><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h5>
+                    <p className="opacity-50">{_x['description']}</p>
+                </div>
+            </div>
+        )}
+        </>
+    )
+}
+
 return <>
 <div className="row">
     <h2 className="text-white text-center" id="packages">Packages</h2>
-    {retainers.map((_x, _index) => 
-        <div className="col-12 col-md-6 col-lg-6 p-4" key={_index}>
-            <div className="retainer-card">
-                <h3>{_x['title']}</h3>
-                <h5><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h5>
-                <p className="opacity-50">{_x['description']}</p>
-            </div>
-        </div>
-    )}
+    {isMobile?
+        <MobileComp/>
+    :
+        <NonMobileComp/>
+    }
+    
 </div>
 </>
 }
