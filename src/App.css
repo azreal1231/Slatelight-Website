@@ -226,3 +226,27 @@ body {
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
 } */
+
+
+.swiper-pagination-bullet{
+    background-color: aliceblue;
+    background: white;
+}
+#about{
+    scroll-margin-top: 80px;
+}
+#references{
+    scroll-margin-top: 20px;
+}
+#partners{
+    scroll-margin-top: 20px;
+}
+#addons{
+    scroll-margin-top: 20px;
+}
+#packages{
+    scroll-margin-top: 20px;
+}
+#disclaimer{
+    scroll-margin-top: 20px;
+}
