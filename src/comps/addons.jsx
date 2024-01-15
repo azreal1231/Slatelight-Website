@@ -73,7 +73,7 @@ const MobileComp = () => {
                         <h4 className="card-title">{_x['title']}</h4>
                         <h6>{_x['sub_title']}</h6>
                         <small className="opacity-50 card-summery">{_x['description']}</small>
-                        <span>{_x['amount']}</span>
+                        <span className="mt-3">{_x['amount']}</span>
                     </div>
                 </SwiperSlide>
             )}
@@ -91,7 +91,7 @@ const NonMobileComp = () => {
                     <h4 className="card-title">{_x['title']}</h4>
                     <h6>{_x['sub_title']}</h6>
                     <small className="opacity-50 card-summery">{_x['description']}</small>
-                    <span>{_x['amount']}</span>
+                    <span className="mt-3">{_x['amount']}</span>
                 </div>
             </div>
         )}
