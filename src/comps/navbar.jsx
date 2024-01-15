@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
 
 const NavBar = () => {
-    // State to manage the collapse of the navbar
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
-    // Function to toggle the navbar collapse state
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+    const handleNavLinkClick = (anchorId) => {
+        setIsNavCollapsed(true);
+        // setTimeout(() => {
+        //     const element = document.getElementById(anchorId);
+        //     if (element) {
+        //         // Navigate to the section
+        //         window.location.hash = '#' + anchorId;
+        //         // Adjust scroll position
+        //         setTimeout(() => {
+        //             window.scrollBy(0, -20); // Scroll up by 20px
+        //         }, 100); // Delay to ensure the default navigation is complete
+        //     }
+        // }, 150);
+    };
 
     return (
         <nav className="navbar navbar-expand-lg my-navbar">
@@ -19,16 +32,16 @@ const NavBar = () => {
                 <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-end`} id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#about" onClick={() => setIsNavCollapsed(true)}>About</a>
+                            <a className="nav-link active text-white fs-5 text-center" href="#about" onClick={() => handleNavLinkClick('about')}>About</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#references" onClick={() => setIsNavCollapsed(true)}>References</a>
+                            <a className="nav-link active text-white fs-5 text-center" href="#references" onClick={() => handleNavLinkClick('references')}>References</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#packages" onClick={() => setIsNavCollapsed(true)}>Packages</a>
+                            <a className="nav-link active text-white fs-5 text-center" href="#packages" onClick={() => handleNavLinkClick('packages')}>Packages</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active text-white fs-5 text-center" aria-current="page" href="#partners" onClick={() => setIsNavCollapsed(true)}>Partners</a>
+                            <a className="nav-link active text-white fs-5 text-center" href="#partners" onClick={() => handleNavLinkClick('partners')}>Partners</a>
                         </li>
                     </ul>
                 </div>

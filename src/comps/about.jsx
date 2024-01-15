@@ -46,7 +46,7 @@ return <>
             <span className="page-sub-tit text-capitalize">your partner in innovative software solutions. </span>
         </h3>
         <div className="row d-flex justify-content-center" style={{'justifyContent': 'center', display: 'block'}}>
-            <p className="col-lg-8 col-md-10">
+            <div className="col-lg-8 col-md-10">
                 <p className="summery">
                     Specializing in Systems Development, we excel in using 
                     &nbsp;<a href="https://react.dev/" target="_blank">React</a>&nbsp; 
@@ -56,7 +56,7 @@ return <>
                     Our team's expertise ensures <b>tailored</b>, efficient solutions that cater to your unique business needs. 
                     Join us in redefining software <b>excellence</b>.
                 </p>
-            </p>
+            </div>
         </div>
     </div>
 </>
