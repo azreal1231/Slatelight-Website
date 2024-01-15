@@ -21,6 +21,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif; 
+
 }
 
 .page-tit{
@@ -36,6 +37,23 @@ body {
     text-align: justify;
     text-align-last: center;
     font-size: 1.14rem;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
+    /* text-justify: distribute; */
+}
+
+.disclaimer-txt{
+    font-family: 'MontserratLight', sans-serif;
+    text-align: justify;
+    text-align-last: center;
+    font-size: .8rem;
+    cursor: default;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
     /* text-justify: distribute; */
 }
 
@@ -50,8 +68,10 @@ body {
 .card-summery{
     font-family: 'MontserratLight', sans-serif;
     text-align: justify;
-    /* text-align-last: center; */
-    /* font-size: 1.14rem; */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
 }
 
 .my-navbar .navbar-toggler-icon {
@@ -72,6 +92,10 @@ body {
 
 .main-content {
     padding-top: 70px; /* Adjust this value based on the height of your navbar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
 }
 
 @media (max-width: 768px) { /* Adjusts for mobile devices */
@@ -107,6 +131,11 @@ body {
     color: white;
     transition: opacity 0.3s ease, background-image 0.3s ease;
     cursor: default;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
 }
 
 .retainer-card h3 {
@@ -145,6 +174,11 @@ body {
     color: white;
     transition: opacity 0.3s ease, background-image 0.3s ease;
     cursor: default;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
 }
 
 .addons-card h3 {
