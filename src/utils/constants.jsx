@@ -50,9 +50,10 @@ export const partners = [
         'website_url': 'https://trinityweb.online/web-development-services/',
         'name': '',
         'description': <p>
-            Slatelight has been collaborating with TrinityWeb for the past four years in a highly successful partnership within the software development sector. 
+            Slatelight has been collaborating with 
             <a href="https://trinityweb.online/" target="_blank" rel="noopener noreferrer"><b>TrinityWeb</b></a>
-            , known for its extensive range of software development support, has significantly enriched their joint projects. 
+            for the past four years in a highly successful partnership within the software development sector. 
+            TrinityWeb, known for its extensive range of software development support, has significantly enriched their joint projects. 
         </p>
     }
 ]
