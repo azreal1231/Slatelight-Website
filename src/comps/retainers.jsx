@@ -91,8 +91,9 @@ const NonMobileComp = () => {
             <div className="col-12 col-md-6 col-lg-6 p-4" key={_index}>
                 <div className="retainer-card">
                     <h3>{_x['title']}</h3>
-                    <h5><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h5>
+                    <h5><span className="opacity-75">{_x['sub_title']}</span></h5>
                     <p className="opacity-50">{_x['description']}</p>
+                    <span className="fs-5">{_x['amount']}</span>
                 </div>
             </div>
         )}

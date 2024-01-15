@@ -45,7 +45,7 @@ const NonMobileComp = () => {
     return (
         <div className="row d-flex justify-content-center">
         {partners.map((_x, _index) => 
-            <div className="col-lg-3 col-md-6 col-sm-12 p-2" key={_index}>
+            <div className="col-lg-4 col-md-6 col-sm-12 p-2" key={_index}>
                 <div className="text-white normal-card">
                     <img src={_x['logo_url']} className="size-70" alt="" />
                     <small className="opacity-50 text-center">{_x['description']}</small>
