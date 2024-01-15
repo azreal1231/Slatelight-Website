@@ -15,17 +15,17 @@ return <>
             <ul className="navbar-nav float-right text-right">
             <li className="nav-item pt-2">
                 <a className="nav-links" href="#About">
-                <b>About</b>
+                    <b>About</b>
                 </a>
             </li>
             <li className="nav-item pt-2">
                 <a className="nav-links" href="#Contact">
-                <b>Contact</b>
+                    <b>Contact</b>
                 </a>
             </li>
             <li className="nav-item pt-2">
                 <a className="nav-links" href="#Services">
-                <b>Services</b>
+                    <b>Services</b>
                 </a>
             </li>
             </ul>

@@ -70,9 +70,10 @@ const MobileComp = () => {
             {addons.map((_x, _index) => 
                 <SwiperSlide key={_index}>
                     <div className="addons-card">
-                        <h4>{_x['title']}</h4>
-                        <h6><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h6>
-                        <small className="opacity-50">{_x['description']}</small>
+                        <h4 className="card-title">{_x['title']}</h4>
+                        <h6>{_x['sub_title']}</h6>
+                        <small className="opacity-50 card-summery">{_x['description']}</small>
+                        <span>{_x['amount']}</span>
                     </div>
                 </SwiperSlide>
             )}
@@ -87,9 +88,10 @@ const NonMobileComp = () => {
         {addons.map((_x, _index) => 
             <div className="col-lg-3 col-md-6 col-sm-12 p-2" key={_index}>
                 <div className="addons-card">
-                    <h4>{_x['title']}</h4>
-                    <h6><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h6>
-                    <small className="opacity-50">{_x['description']}</small>
+                    <h4 className="card-title">{_x['title']}</h4>
+                    <h6>{_x['sub_title']}</h6>
+                    <small className="opacity-50 card-summery">{_x['description']}</small>
+                    <span>{_x['amount']}</span>
                 </div>
             </div>
         )}
@@ -99,7 +101,7 @@ const NonMobileComp = () => {
 
 return <>
 <div className="row d-flex justify-content-center">
-    <h4 className="text-white text-center" id="addons">Addons</h4>
+    <h4 className="text-white text-center page-tit" id="addons">Addons</h4>
     {isMobile?
         <MobileComp/>
     :

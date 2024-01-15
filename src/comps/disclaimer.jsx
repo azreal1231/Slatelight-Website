@@ -1,7 +1,7 @@
 const DisclaimerComp = () => {
 return <>
 <div className="row d-flex justify-content-center mt-4">
-    <small className="text-center text-white pb-0 pt-0">Disclaimer</small>
+    <small className="text-center text-white pb-0 pt-0 page-tit">Disclaimer</small>
     <div className="col-12 col-lg-8">
         <p className='text-white text-center p-4 pt-0 opacity-50' style={{cursor: 'default', fontSize: '.8rem'}}>
             Please note that all retainer and add-on hour tiers cover a range of services including development work, support, and meetings. 

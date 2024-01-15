@@ -57,7 +57,7 @@ const NonMobileComp = () => {
 }
 
 return <div id="partners">
-    <h2 className="text-center text-white">Partners</h2>
+    <h2 className="text-center text-white page-tit">Partners</h2>
     {isMobile?
         <MobileComp/>
     :

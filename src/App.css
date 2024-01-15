@@ -20,7 +20,15 @@
 }
 
 body {
-    font-family: 'Inno', sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.page-tit{
+    font-family: 'Inno', sans-serif;
+}
+
+.page-sub-tit{
+    font-family: 'Montserrat', sans-serif; 
 }
 
 .summery{
@@ -29,6 +37,21 @@ body {
     text-align-last: center;
     font-size: 1.14rem;
     /* text-justify: distribute; */
+}
+
+.card-title{
+    font-family: 'Inno', sans-serif;
+}
+
+.card-sub-title{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-summery{
+    font-family: 'MontserratLight', sans-serif;
+    text-align: justify;
+    /* text-align-last: center; */
+    /* font-size: 1.14rem; */
 }
 
 .my-navbar .navbar-toggler-icon {
@@ -43,6 +66,7 @@ body {
     z-index: 1000; /* High z-index to keep it on top */
     backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
+    font-family: 'Inno', sans-serif;
     /* background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); Gradient effect */
 }
 
@@ -53,6 +77,11 @@ body {
 @media (max-width: 768px) { /* Adjusts for mobile devices */
     .main-content {
         padding-top: 70px; /* Adjust this value based on the height of your navbar */
+    }
+    .summery{
+        margin-top: 20px;
+        text-align: left;
+        text-align-last: left;
     }
 }
 

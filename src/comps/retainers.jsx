@@ -73,9 +73,10 @@ const MobileComp = () => {
             {retainers.map((_x, _index) => 
                 <SwiperSlide key={_index}>
                     <div className="retainer-card">
-                        <h3>{_x['title']}</h3>
-                        <h5><span className="opacity-75">{_x['sub_title']}</span> | <span>{_x['amount']}</span></h5>
-                        <p className="opacity-50">{_x['description']}</p>
+                        <h3 className="card-title">{_x['title']}</h3>
+                        <h5 className="opacity-75 card-sub-title">{_x['sub_title']}</h5>
+                        <p className="opacity-50 card-sub-title">{_x['description']}</p>
+                        <span className="fs-5 card-title">{_x['amount']}</span>
                     </div>
                 </SwiperSlide>
             )}
@@ -90,10 +91,10 @@ const NonMobileComp = () => {
         {retainers.map((_x, _index) => 
             <div className="col-12 col-md-6 col-lg-6 p-4" key={_index}>
                 <div className="retainer-card">
-                    <h3>{_x['title']}</h3>
-                    <h5><span className="opacity-75">{_x['sub_title']}</span></h5>
-                    <p className="opacity-50">{_x['description']}</p>
-                    <span className="fs-5">{_x['amount']}</span>
+                    <h3 className="card-title">{_x['title']}</h3>
+                    <h5 className="opacity-75 card-sub-title">{_x['sub_title']}</h5>
+                    <p className="opacity-50 card-sub-title">{_x['description']}</p>
+                    <span className="fs-5 card-title">{_x['amount']}</span>
                 </div>
             </div>
         )}
@@ -103,7 +104,7 @@ const NonMobileComp = () => {
 
 return <>
 <div className="row">
-    <h2 className="text-white text-center" id="packages">Packages</h2>
+    <h2 className="text-white text-center page-tit" id="packages">Packages</h2>
     {isMobile?
         <MobileComp/>
     :
