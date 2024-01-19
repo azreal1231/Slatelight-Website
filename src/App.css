@@ -137,8 +137,11 @@ a {
     .disclaimer-txt{
         text-align-last: left;
     }
+    /* .partner-heading{
+        font-size: 0.8rem;
+    }     */
     .partner-txt{
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align-last: left;
     }
 }

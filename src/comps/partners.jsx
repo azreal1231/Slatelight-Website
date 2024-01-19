@@ -64,7 +64,7 @@ return <div id="partners">
         <NonMobileComp/>
     } */}
     <div className="row d-flex justify-content-center">
-        <div className="col-xl-8 col-sm-10">
+        <div className="col-10">
             {/* <p className="partner-txt">
                 Partnered with 
                 <img src={partners[0]['logo_url']} alt="" srcset="" height={45} />
