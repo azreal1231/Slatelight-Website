@@ -112,12 +112,22 @@ function App() {
       <div className="app-container">
         <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
         <div className="container">
-          <AboutComp />
-          <ReferencesComp />
-          <RetainersComp />
-          <AddonsComp />
-          <PartnersComp />
-          <DisclaimerComp />
+          <section className='section-spacer'>
+            <AboutComp />
+          </section>
+          <section className='section-spacer'>
+            <ReferencesComp/>
+          </section>
+          <section className='section-spacer'>
+            <RetainersComp/>
+            <AddonsComp/>
+          </section>
+          <section className='section-spacer'>
+            <PartnersComp/>
+          </section>
+          <section className='section-spacer'>
+            <DisclaimerComp/>
+          </section>
         </div>
       </div>
     </div>

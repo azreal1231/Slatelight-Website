@@ -21,8 +21,12 @@
 
 body {
     font-family: 'Montserrat', sans-serif; 
-
 }
+
+a {
+    text-decoration: none;
+}
+
 
 .page-tit{
     font-family: 'Inno', sans-serif;
@@ -57,6 +61,25 @@ body {
     /* text-justify: distribute; */
 }
 
+.partner-heading{
+    font-family: 'Inno', sans-serif;
+    color: white;
+}
+
+.partner-txt{
+    font-family: 'MontserratLight', sans-serif;
+    text-align: justify;
+    text-align-last: center;
+    font-size: 1.2rem;
+    cursor: default;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
+    color: white;
+    /* text-justify: distribute; */
+}
+
 .card-title{
     font-family: 'Inno', sans-serif;
 }
@@ -76,6 +99,10 @@ body {
 
 .my-navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.section-spacer{
+    margin-bottom: 80px;
 }
 
 .my-navbar {
@@ -105,6 +132,13 @@ body {
     .summery{
         margin-top: 20px;
         text-align: left;
+        text-align-last: left;
+    }
+    .disclaimer-txt{
+        text-align-last: left;
+    }
+    .partner-txt{
+        font-size: 1rem;
         text-align-last: left;
     }
 }

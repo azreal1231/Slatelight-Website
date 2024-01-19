@@ -57,12 +57,35 @@ const NonMobileComp = () => {
 }
 
 return <div id="partners">
-    <h2 className="text-center text-white page-tit">Partners</h2>
-    {isMobile?
+    {/* <h2 className="text-center text-white page-tit">Partners</h2> */}
+    {/* {isMobile?
         <MobileComp/>
     :
         <NonMobileComp/>
-    }
+    } */}
+    <div className="row d-flex justify-content-center">
+        <div className="col-xl-8 col-sm-10">
+            {/* <p className="partner-txt">
+                Partnered with 
+                <img src={partners[0]['logo_url']} alt="" srcset="" height={45} />
+                Slatelight has been collaborating with 
+                <a href="https://trinityweb.online/" className="text-transform-none" target="_blank" rel="noopener noreferrer"><b className="text-white">&nbsp;TrinityWeb&nbsp;</b></a>
+                for the past four years in a highly successful partnership within the software development sector. 
+                TrinityWeb, known for its extensive range of software development support, has significantly enriched their joint projects. 
+            </p> */}
+            <h3 className="partner-heading text-center mb-0 pb-0">
+                <span className="opacity-75">Partnered with </span>
+                <img src={partners[0]['logo_url']} alt="" srcset="" height={45} />
+            </h3>
+            <p className="partner-txt">
+                In our four-year partnership with <b>TrinityWeb</b>, 
+                Slatelight has significantly advanced in the software development sector. 
+                <b>TrinityWeb</b> 's diverse IT services, encompassing SEO, marketing, and mobile development, 
+                have enriched our joint projects, creating a robust and dynamic collaboration. 
+                Their extensive support has been pivotal in enhancing our ventures, illustrating the power of combined expertise.
+            </p>
+        </div>
+    </div>
 </div>
 }
 
