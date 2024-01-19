@@ -269,6 +269,9 @@ a {
     background-color: aliceblue;
     background: white;
 }
+.swiper-button-next, .swiper-button-prev{
+    color: white;
+}
 #about{
     scroll-margin-top: 80px;
 }
