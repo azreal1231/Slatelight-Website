@@ -29,17 +29,17 @@ export const addons = [
     {
         'title': 'Boost Tier',
         'sub_title': '5-Hour Add-On',
-        'amount': 'R1,750',
+        'amount': 'R 1,750',
         'description': 'Quick 5-hour boost for small tasks or final touches.'
     },{
         'title': 'Surge Tier',
         'sub_title': '10-Hour Add-On',
-        'amount': 'R3,675',
+        'amount': 'R 3,675',
         'description': '10 extra hours for intermediate project extensions.'
     },{
         'title': 'Momentum Tier',
         'sub_title': '15-Hour Add-On',
-        'amount': 'R5,775',
+        'amount': 'R 5,775',
         'description': '15-hour top-up for significant project expansions.'
     },
 ]
