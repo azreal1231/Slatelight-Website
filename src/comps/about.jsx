@@ -40,7 +40,7 @@ function doOtherThing(){
 }
 
 return <>
-    <div className="container text-white text-center" style={{'marginTop': '50px'}} id="about">
+    <div className="container text-white text-center about-inner" id="about">
         <h3>
             <span className="site-title-inner magic-text fs-1 page-tit" data-value="Slatelight Pty Ltd" style={{'cursor': 'default'}}>Slatelight Pty Ltd</span> <br /> 
             <span className="page-sub-tit text-capitalize">your partner in innovative software solutions. </span>

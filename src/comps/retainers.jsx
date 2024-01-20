@@ -69,7 +69,7 @@ const MobileComp = () => {
     return <div className="row d-flex justify-content-center">
         <div className="col-11">
         <Swiper slidesPerView={'1'} pagination={{clickable: true,}}
-            modules={[Pagination]}className="mySwiper">
+            modules={[Pagination]} className="mySwiper">
             {retainers.map((_x, _index) => 
                 <SwiperSlide key={_index}>
                     <div className="retainer-card">

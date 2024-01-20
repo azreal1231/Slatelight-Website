@@ -67,7 +67,7 @@ return <div id="partners">
         <div className="col-10">
             {/* <p className="partner-txt">
                 Partnered with 
-                <img src={partners[0]['logo_url']} alt="" srcset="" height={45} />
+                <img src={partners[0]['logo_url']} alt="" srcSet="" height={45} />
                 Slatelight has been collaborating with 
                 <a href="https://trinityweb.online/" className="text-transform-none" target="_blank" rel="noopener noreferrer"><b className="text-white">&nbsp;TrinityWeb&nbsp;</b></a>
                 for the past four years in a highly successful partnership within the software development sector. 
@@ -75,7 +75,7 @@ return <div id="partners">
             </p> */}
             <h3 className="partner-heading text-center mb-0 pb-0">
                 <span className="opacity-75">Partnered with </span>
-                <img src={partners[0]['logo_url']} alt="" srcset="" height={45} />
+                <img src={partners[0]['logo_url']} alt="" srcSet="" height={45} />
             </h3>
             <p className="partner-txt">
                 In our four-year partnership with <b>TrinityWeb</b>, 
