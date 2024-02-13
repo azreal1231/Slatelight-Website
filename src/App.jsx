@@ -115,9 +115,9 @@ function App() {
           <section className='section-spacer'>
             <AboutComp />
           </section>
-          <section className='section-spacer'>
+          {/* <section className='section-spacer'>
             <ReferencesComp/>
-          </section>
+          </section> */}
           <section className='section-spacer'>
             <RetainersComp/>
             <AddonsComp/>
