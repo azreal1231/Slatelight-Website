@@ -34,9 +34,9 @@ const NavBar = () => {
                         <li className="nav-item">
                             <a className="nav-link active text-white fs-5 text-center" href="#about" onClick={() => handleNavLinkClick('about')}>About</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link active text-white fs-5 text-center" href="#references" onClick={() => handleNavLinkClick('references')}>References</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link active text-white fs-5 text-center" href="#packages" onClick={() => handleNavLinkClick('packages')}>Packages</a>
                         </li>
