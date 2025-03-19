@@ -1,48 +1,9 @@
-import { useState, useEffect } from "react"
-
 const AboutComp = () => {
-const [compMounted, setCompMounted] = useState(false)
-
-useEffect(() => {
-    if(!compMounted){
-        setCompMounted(true)
-        doOtherThing()
-    }
-}, [compMounted])
-
-function doOtherThing(){
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let interval = null;
-    document.querySelector(".site-title-inner").onmouseover = event => {  
-    let iteration = 0;
-    
-    clearInterval(interval);
-    
-    interval = setInterval(() => {
-        event.target.innerText = event.target.innerText
-        .split("")
-        .map((letter, index) => {
-            if(index < iteration) {
-            return event.target.dataset.value[index];
-            }
-        
-            return letters[Math.floor(Math.random() * 26)]
-        })
-        .join("");
-        
-        if(iteration >= event.target.dataset.value.length){ 
-        clearInterval(interval);
-        }
-        
-        iteration += 1 / 3;
-    }, 70);
-    }
-}
 
 return <>
     <div className="container text-white text-center about-inner" id="about">
         <h3>
-            <span className="site-title-inner magic-text fs-1 page-tit" data-value="Slatelight Pty Ltd" style={{'cursor': 'default'}}>Slatelight Pty Ltd</span> <br /> 
+            <span className="site-title-inner fs-1 page-tit" data-value="Slatelight Pty Ltd" style={{'cursor': 'default'}}>Slatelight Pty Ltd</span> <br /> 
             <span className="page-sub-tit text-capitalize">your partner in innovative software solutions. </span>
         </h3>
         <div className="row d-flex justify-content-center" style={{'justifyContent': 'center', display: 'block'}}>
