@@ -68,25 +68,5 @@ export const references = [
         'summery': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, ab at optio iste tempora vel, omnis quis unde, dolores reiciendis ex iure? Numquam eius esse distinctio id explicabo, cum minus!',
         'years': '3+',
         'package': 'Premier Tier'
-    },
-    {
-        'company_name': 'TrinityWeb Pty Ltd',
-        'person': 'Enrico leigh',
-        'position': 'CEO',
-        'company_url': 'https://trinityweb.online/',
-        'company_logo_url': '/imgs/trinity-final.png',
-        'summery': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, ab at optio iste tempora vel, omnis quis unde, dolores reiciendis ex iure? Numquam eius esse distinctio id explicabo, cum minus!',
-        'years': '3+',
-        'package': 'Surge Tier'
-    },
-    // {
-    //     'company_name': 'TrinityWeb Pty Ltd',
-    //     'person': 'Enrico leigh',
-    //     'position': 'CEO',
-    //     'company_url': 'https://trinityweb.online/',
-    //     'company_logo_url': '/imgs/gg-final.png',
-    //     'summery': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, ab at optio iste tempora vel, omnis quis unde, dolores reiciendis ex iure? Numquam eius esse distinctio id explicabo, cum minus!',
-    //     'years': '3+',
-    //     'package': 'Surge Tier'
-    // }
+    }
 ]
