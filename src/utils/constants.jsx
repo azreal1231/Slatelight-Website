@@ -1,4 +1,4 @@
-export const retainers_2026 = [
+export const retainers = [
     {
         title: "Premier Tier",
         sub_title: "100-Hour Retainer + 20 Free Hours & Quick Support",
@@ -28,7 +28,7 @@ export const retainers_2026 = [
     }
     ];
 
-export const addons_2026 = [
+export const addons = [
     {
         title: "Boost Tier",
         sub_title: "5-Hour Add-On",
