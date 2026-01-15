@@ -48,3 +48,31 @@ export const addons = [
         description: "15-hour top-up for significant project expansions."
     }
 ];
+
+
+export const partners = [
+    {
+        'logo_url': 'https://trinityweb.online/wp-content/uploads/2022/09/trinity_white.png.webp',
+        'website_url': 'https://trinityweb.online/web-development-services/',
+        'name': '',
+        'description': <>
+            Slatelight has been collaborating with 
+            <a href="https://trinityweb.online/" target="_blank" rel="noopener noreferrer"><b>&nbsp;TrinityWeb&nbsp;</b></a>
+            for the past four years in a highly successful partnership within the software development sector. 
+            TrinityWeb, known for its extensive range of software development support, has significantly enriched their joint projects. 
+        </>
+    }
+]
+
+export const references = [
+    {
+        'company_name': 'Farber Coachworks',
+        'person': 'Kaelin Reddy',
+        'position': 'CEO',
+        'company_url': 'https://rcfholdings.co.za/',
+        'company_logo_url': '/imgs/farber-final.png',
+        'summery': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, ab at optio iste tempora vel, omnis quis unde, dolores reiciendis ex iure? Numquam eius esse distinctio id explicabo, cum minus!',
+        'years': '3+',
+        'package': 'Premier Tier'
+    }
+]
